@@ -1,0 +1,117 @@
+.reviews {
+    width: 100%;
+    background-color: $color-white;
+
+    & .review-title {
+      width: $margin-lg;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10rem 0 0 0;
+
+      @include respond(tab-land){
+        width: $margin-md;
+      }
+
+      & h3 {
+        font-size: 3rem;
+        color: $primary-color-2;
+        text-align: center;
+      }
+    }
+
+    & .review-container {
+      width: $margin-lg;
+      margin: auto;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+      display: grid;
+      gap: 2rem;
+      @include respond(tab-land){
+        width: $margin-md;
+      }
+
+      & article {
+        background-color: $primary-color-2;
+        padding: 20px;
+        box-shadow: 2rem 3rem 4rem rgba(0, 0, 0, 0.247);
+        border-radius: 20px;
+        font-size: 18px;
+        line-height: 28px;
+        color: $color-white;
+
+        & > a {
+          margin-right: 1rem;
+          font-size: 2.4rem;
+          line-height: 6rem;
+          text-decoration: none;
+          gap: 20rem;
+          color: $secondary-color-5;
+        }
+
+        &:first-child {
+          grid-column-start: 3;
+          grid-row-start: 1;
+          grid-row-end: 3;
+          background-color: $primary-color-5;
+          z-index: 3;
+          color: $primary-color-2;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: $primary-color-4;
+            color: $primary-color-5;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 0;
+          }
+        }
+
+        &:nth-child(2) {
+          grid-column: span 2;
+          transition: all 0.6s ease;
+
+          &:hover,
+          & a:hover {
+            background-color: $secondary-color-5;
+            color: $primary-color-2;
+            box-shadow: 0 0 0;
+            transition: all 0.3s ease;
+            z-index: 1;
+          }
+        }
+        &:nth-child(3) {
+          grid-column: span 2;
+          background-color: $color-white;
+          color: #1a2040;
+          transition: all 0.3s ease;
+          z-index: 2;
+
+          &:hover {
+            background-color: #000000;
+            color: $color-white;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 0;
+            z-index: 1;
+          }
+        }
+
+        & .img-text {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 20px;
+          padding-bottom: 16px;
+          border-bottom: 1px solid $secondary-color-5;
+
+          & h3 {
+            font-size: 26px;
+          }
+          & img {
+            border-radius: 50%;
+            max-width: 40px;
+            margin-right: 20px;
+            background-color: $primary-color-5;
+          }
+        }
+      }
+    }
+  }
